@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>KodeinKGP</title>
+    <link rel="icon" href="logo.png"/>
+    <style>
+      body{
+        color: white;
+        background-color: #01011b;
+        font-family: Arial, sans-serif;
+
+
+      }
+      .navbar{
+        flex-direction: row;
+        padding-left: 16px;
+        padding-right: 16px;
+        justify-content: center;
+        z-index: 20;
+        position: sticky;
+        top: 0;
+        background-color: rgba(1, 1, 27, .6);
+
+
+
+      }
+      .logo{
+        width:50px;
+        padding: 5px;
+      }
+      .logonav{
+        display: inline-block;
+      }
+      h4{
+        display: inline-block;
+      }
+      .logonav{
+        align-items: center;
+        display: flex;
+        font-size: 1.2rem;
+        gap: 5px;
+        }
+      .nav{
+        margin-left: 504px;
+      }
+      .navopt{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+      .link{
+        padding: 0px 20px;
+        color: white;
+        font-family: Arial,sans-serif;
+        text-decoration: none;
+        position: relative;
+      }
+      .link:hover:after{
+        width: 100%;
+
+      }
+      .link::after{
+        content: '';
+        position: absolute;
+        height: 2px;
+        left:0;
+        bottom:0;
+        width:0%;
+        background: #56c3d5;
+        transition: width .3s;
+      }
+      .part1{
+        display: flex;
+        flex-direction: row;
+        padding: 30px;
+        justify-content: space-between;
+        
+      }
+      .lpart1{
+        padding:20px;
+      }
+      .rphoto{
+        height: 300px;
+        width:300px;
+        
+      }
+      .welname{
+        color: #56c3d5;
+        font-size: 20px;
+      }
+      .vision
+      {
+        font-family: Poppins, sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 30.8px;
+        width: 550px;
+        color: #979898;
+        padding-bottom: 40px;
+        padding-top: 40px;
+        text-align: left;
+      }
+      h1{
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-size: 65px;
+        font-weight: 600;
+        text-align: left;
+      } 
+      .h1span{
+        background: linear-gradient(to bottom right, #11e3fb, #5be6ff, #b5f6fd, #11e3fb);
+       -webkit-background-clip: text;
+       background-clip: text;
+       color: transparent;
+       font-size: 80px;
+       font-weight: 700;
+       text-align: center
+      }
+      .visiondepth{
+        font-family: Poppins, sans-serif;
+       font-size: 18px;
+       font-weight: 400;
+       line-height: 30.8px;
+       text-align: left;
+       width: 550px;
+      }
+      .rflex{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .data{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 60px;
+        padding-left: 60px;
+        padding-right: 60px;
+        
+
+      }
+      div span{
+        background: linear-gradient(to bottom right, #11e3fb, #5be6ff, #b5f6fd, #11e3fb);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        font-size: x-large
+
+      }
+      .text{
+        font-size: xx-large;
+        font-weight: 600;
+      }
+      .ourex{
+        color: #56c3d5;
+        font-family: poppins, sans-serif;
+        font-size: 48px;
+        margin: 2rem 0 1rem;
+        text-align: center;
+        font-weight: bold;
+
+      }
+      .ex3{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: 10%;
+        margin-right: 10%;
+        text-align: center;
+
+
+      }
+      .web,.ai,.blockchain{
+        width: 100%;
+        text-align: center;
+      
+       
+
+      }
+      
+      h2{
+        color: #56c3d5;
+      }
+      .pds{
+        display: flex;
+        flex-direction: row;
+        margin-top: 150px ;
+        margin-left: 17%;
+        margin-right: 5%;
+        margin-bottom: 0px;
+        
+
+
+      }
+      .pdsprob{
+        width: 300px;
+
+      }
+      .pdssug1{
+        font-size: 50px;
+        color:#56c3d5;
+        margin-bottom: 0px;
+        font-weight: bold;
+
+      }
+      .pdssug2{
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .linebreak{
+        border-color:grey;
+      }
+      .footerp{
+        width: 60px;
+
+      }
+      .footericon{
+        width: 35px;
+        height: 35px;
+        background-color: #01011b;
+      }
+      .ficonpanel{
+        margin-top: 32px;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 32px;
+        justify-content: space-between;
+
+      }
+      .footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+
+      }
+      .footer1,.footer2,.footer3,.footer4{
+        padding: 16px;
+        margin-top: 16px;
+        margin-bottom: 16px;
+        margin-left: 40px;
+        margin-right: 40px;
+      }
+      .footerheading{
+        margin-top: 8px;
+        font-weight: bold;
+        font-size: 25px;
+        margin-bottom: 8px;
+      }
+      .footer2,.footer3,.footer4{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .bottomfooter{
+        display: flex;
+        flex-direction: row;
+        
+      }
+      .footer4{
+        height: 278.23px;
+      }
+      .flink{
+        color: wheat;
+        text-decoration: none;
+      }
+
+
+      
+      
+      
+      
+      
+    </style>
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="headingwithphoto">
+        <div class="logonav">
+          <img src="logo.png" class="logo">
+          <h4>KodeinKGP</h4>
+        
+          <div class="nav">
+            <div class="navopt">
+            <a class="link" href="http://127.0.0.1:5500/kodeinkgpclone.html/kgp.html">Home</a>
+            <a class = "link" href="">PDS_Bank</a>
+            <a  class ="link" href="">Articles</a>
+            <a  class="link" href="http://127.0.0.1:5500/kodeinkgpclone.html/kgp_teams.html">Teams</a>
+            <a class="link" href="">Events</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="part1">
+      <div class="lpart1">
+        <div>
+          <div class="wel"><h1>Welcome to</h1></div>
+          <div class="welname"><h1><span class="h1span">KodeinKGP</span></h1></div>
+        </div>
+        <p class="vision">“The Web as I envisaged it, we have not seen it yet. The future is still so much bigger than the past”</p>
+        <p class="visiondepth">A student-run society that aims to spread awareness and educate students about the potential of Web 3.0 and future technologies. We host workshops and hackathons to give students hands-on experience with Blockchain Development and Artificial Intelligence. Additionally, we use our skills in web development and blockchain to work on real-world problems faced by the student community at IIT Kharagpur and beyond. By joining KodeinKGP, students can gain valuable technical skills and contribute to solving important problems while learning about one of the most exciting and rapidly-evolving technologies of our time.</p>
+      </div>
+      <div class="rpart1">
+        
+        <img src="logo.png" class="rphoto">
+        
+
+      </div>
+
+    </div>
+
+
+    <div class="data">
+      <div class="text">260+ <span>PDS Problems</span></div>
+      <div class="text" >17+ <span>Articles</span></div>
+      <div class="text">15+ <span>Events</span></div>
+      <div class="text">7000+ <span>Community Members</span></div>
+    </div>
+
+    <div class="part2">
+      <h1 class="ourex">Our Expertise</h1>
+
+    </div>
+
+    <div class="ex3">
+      <div class="plate1">
+        <h2 class="plateheading">WEB</h2>
+        <div class="web">Weave your digital aspirations into reality through our dynamic Web solutions, fusing creativity with functionality.</div>
+
+      </div>
+      <div class="plate2">
+        <h2 class="plateheading">AI and Metaverse</h2>
+        <div class="ai">Enter a realm where AI drives immersive Metaverse encounters, pushing boundaries of what's possible.</div>
+      </div>
+      
+      <div class="plate3">
+        <h2 class="plateheading">Blockchain</h2>
+        <div class="blockchain">Transform transactions with our secure Blockchain solutions, rewriting the rules of trust and transparency</div>
+
+      </div>
+
+    </div>
+
+    <div class="pds">
+      <div>
+        <p class="pdssug1">Still Getting Stuck in PDS</p>
+        <p class="pdssug2">Our curated PDS problems set works right for you...</p>
+      </div>
+      <div>
+        <img src="pdsprob.png" class="pdsprob">
+      </div>
+    </div>
+
+    <hr class="linebreak">
+
+    <div class="footer">
+      <div class="footer1">
+        <img src="logo.png" class="footerp"> 
+        <div class="footerheading">KodeinKGP</div>
+        <div>Indian Institute of Technology Kharagpur,<br>
+          West Bengal - 721302
+        </div>
+          <div class="ficonpanel">
+            <img src="" class="footericon">
+            <img src="" class="footericon">
+            <img src="" class="footericon">
+            <img src="" class="footericon">
+            <img src="" class="footericon">
+          </div>
+        <div>
+        </div>
+      </div>
+
+      <div class="footer2">
+        <p class="footerheading">Blockchain</p>
+        <a href="https://www.youtube.com/watch?v=gyMwXuJrbJQ" class="flink" target="_blank">freecodecamp</a>
+        <a href="https://www.youtube.com/@CodeEater21/videos" class="flink" target="_blank">code Eater</a>
+        <a href="https://www.youtube.com/@WhiteboardCrypto" class="flink" target="_blank">Whiteboard crypto</a>
+        <a href="https://www.youtube.com/@Finematics" class="flink" target="_blank">Finematics</a>
+      </div>
+
+      <div class="footer3">
+        <p class="footerheading">Machine Learning</p>
+        <a href="https://www.youtube.com/@Deeplearningai" class="flink" target="_blank">DeepLearningAI</a>
+        <a href="https://www.youtube.com/@SirajRaval/about" class="flink" target="_blank">Siraj Raval</a>
+        <a href="https://www.youtube.com/@sentdex/playlists" class="flink" target="_blank">Sentdex</a>
+        <a href="https://www.youtube.com/@coreyms/about" class="flink" target="_blank">Corey Schafer</a>
+      </div>
+    </div>
+
+    <div class="bottomfooter">
+      <div class="footer4">
+        <p class="footerheading">Web Development</p>
+        <a href="https://www.youtube.com/playlist?list=PLu0W_9lII9agiCUZYRsvtGTXdxkzPyItg" class="flink" target="_blank">CodeWithHarry</a>
+        <a href="https://www.youtube.com/playlist?list=PLfqMhTWNBTe3H6c9OGXb5_6wcc1Mca52n" class="flink" target="_blank">Apna College</a>
+        <a href="https://www.youtube.com/playlist?list=PL4cUxeGkcC9ivBf_eKCPIAYXWzLlPAm6G" class="flink" target="_blank">net ninja</a>
+        <a href="https://www.youtube.com/playlist?list=PLillGF-RfqbZTASqIqdvm1R5mLrQq79CU" class="flink" target="_blank">Traversy Media</a>
+
+
+      </div>
+
+    </div>
+
+
+    
+    <script>
+      
+      
+    </script>
+  </body>
+</html>
