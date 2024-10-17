@@ -14,8 +14,7 @@ button_items.forEach(button_item =>{
   });
 })  
 
-const elements = document.querySelectorAll(".member");
-elements.classList.add('shiny');
+
 
 
 function aimt_toggle(){
