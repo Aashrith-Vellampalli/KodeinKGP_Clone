@@ -14,7 +14,7 @@ button_items.forEach(button_item =>{
   });
 })  
 
-const elements = Document.querySelectorAll(".member");
+const elements = document.querySelectorAll(".member");
 elements.classList.add('shiny');
 
 
