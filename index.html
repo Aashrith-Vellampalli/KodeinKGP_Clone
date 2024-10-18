@@ -25,10 +25,8 @@
 
 
       }
-      .logo{
-        width:50px;
-        padding: 5px;
-      }
+      
+      
       .logonav{
         display: inline-block;
       }
@@ -76,7 +74,7 @@
       .part1{
         display: flex;
         flex-direction: row;
-        padding: 30px;
+        margin: 30px;
         justify-content: space-between;
         
       }
@@ -148,7 +146,7 @@
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
-        font-size: x-large
+        font-size: x-large;
 
       }
       .text{
@@ -170,7 +168,7 @@
         align-items: center;
         text-align: center;
         justify-content: space-around;
-
+        
 
       }
       .web,.ai,.blockchain{
@@ -221,6 +219,7 @@
         width: 35px;
         height: 35px;
         background-color: #01011b;
+        color: #01011b;
       }
       .ficonpanel{
         margin-top: 32px;
@@ -268,7 +267,44 @@
         color: wheat;
         text-decoration: none;
       }
-            .text{
+      @keyframes slidein {
+        from{
+          transform: translate(-1000px);
+        }
+        to{
+          transform: translate(0);
+        }
+        
+      }
+
+      .namei{
+        display: flex;
+        flex-direction: row;
+        
+      }
+      .namej{
+        margin-left: 10px;
+      }
+      .logo{
+        height: 60px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+      
+       
+        
+      
+      .welcome{
+        animation-name: slidein;
+        animation-duration: 0.5s;
+        animation-delay: 0.8s;
+      }
+      .logonav{
+        animation-name: slidedown;
+        animation-duration: 0.5s;
+        animation: delay 1s;
+      }
+      .text{
         opacity:0;
         filter: blur(5px);
         transition: 1s;
@@ -285,14 +321,14 @@
         opacity: 0;
         filter:blur(10px);
         transition: 1s ease-in;
-        
+        transform:translate(-100%);
 
       }
 
       .ourex_slide{
         opacity:1;
         filter: blur(0);
-        
+        transform: translate(0);
       }
       .plate1,.plate2,.plate3{
         opacity: 0;
@@ -305,16 +341,14 @@
         opacity:1;
         filter: blur(0);
       }
-      .plate1{
-        transition-delay: 0.2s
-      }
       .plate2{
-        transition-delay: 0.4s;
+        transition-delay: 0.2s;
         
       }
       .plate3{
-        transition-delay: 0.6s;
+        transition-delay: 0.4s;
       }
+      
       .pds{
         opacity:0;
         filter: blur(0);
@@ -328,7 +362,7 @@
         filter: blur(0);
         transform: translate(0);
       }
-            .panelp{
+      .panelp{
         height: 256px;
         width: 256px;
         margin-bottom: 15px;
@@ -345,15 +379,6 @@
         font-size: large;
         padding: 10px;
       }
-      .plate1, .plate2, .plate3 {
-        flex: 1; 
-        margin: 0 10px;
-}
-  
-
-
-      
-      
       
       
       
@@ -364,15 +389,18 @@
     <div class="navbar">
       <div class="headingwithphoto">
         <div class="logonav">
+          <div class="namei">
             <img src="logo.png" class="logo">
-            <h4 class="namei">KodeinKGP</h4>
+            <h4 class="namej">KodeinKGP</h4>
+          </div>
           
+        
           <div class="nav">
             <div class="navopt">
-            <a class="link" href="index.html">Home</a>
+            <a class="link" href="http://127.0.0.1:5500/kodeinkgpclone.html/kgp.html">Home</a>
             <a class = "link" href="">PDS_Bank</a>
-            <a  class ="link" href="kgp_articles.html">Articles</a>
-            <a  class="link" href="kgp_teams.html">Teams</a>
+            <a  class ="link" href="">Articles</a>
+            <a  class="link" href="http://127.0.0.1:5500/kodeinkgpclone.html/kgp_teams.html">Teams</a>
             <a class="link" href="">Events</a>
             </div>
           </div>
@@ -382,7 +410,7 @@
     
     <div class="part1">
       <div class="lpart1">
-        <div>
+        <div class="Welcome">
           <div class="wel"><h1>Welcome to</h1></div>
           <div class="welname"><h1><span class="h1span">KodeinKGP</span></h1></div>
         </div>
@@ -415,18 +443,20 @@
       <div class="plate1">
         <h2 class="plateheading">WEB</h2>
         <img src="panel1.PNG" class="panelp">
-        <div class="web">Weave your digital<br>aspirations into reality<br>through our dynamic<br>Web solutions, fusing<br>creativity with<br>functionality.</div>functionality.</div>
+        <div class="web">Weave your digital<br>aspirations into reality<br>through our dynamic<br>Web solutions, fusing<br>creativity with<br>functionality.</div>
 
       </div>
       <div class="plate2">
         <h2 class="plateheading">AI and Metaverse</h2>
         <img src="panel2.PNG" class="panelp">
-       <div class="ai">Enter a realm where AI<br>drives immersive<br>Metaverse encounters,<br>pushing boundaries of<br>what's possible.</div>
+        <div class="ai">Enter a realm where AI<br>drives immersive<br>Metaverse encounters,<br>pushing boundaries of<br>what's possible.</div>
+      </div>
       
       <div class="plate3">
         <h2 class="plateheading">Blockchain</h2>
         <img src="panel3.PNG" class="panelp">
         <div class="blockchain">Transform transactions<br>with our secure<br> Blockchain solutions,<br>rewriting the rules of<br>trust and transparency.</div>
+
       </div>
 
     </div>
@@ -494,7 +524,7 @@
 
     
     <script>
-            const observer = new IntersectionObserver((entries) => {
+      const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             entry.target.classList.add('text_slide');
@@ -543,7 +573,8 @@
       document.querySelectorAll('.plate3').forEach((el) => {
         observer2.observe(el);
       });
-       const observer3 = new IntersectionObserver((entries) => {
+
+     const observer3 = new IntersectionObserver((entries) => {
        entries.forEach(entry => {
          if (entry.isIntersecting) {
            entry.target.classList.add('pdsslide');
@@ -555,6 +586,7 @@
      document.querySelectorAll('.pds').forEach((el) => {
        observer3.observe(el);
      });  
+      
       
     </script>
   </body>
