@@ -266,6 +266,50 @@
         color: wheat;
         text-decoration: none;
       }
+            .text{
+        opacity:0;
+        filter: blur(5px);
+        transition: 1s;
+        transform: translate(-100%);
+      }
+
+      .text_slide{
+        opacity:1;
+        filter: blur(0);
+        transform: translate(0);
+      }
+
+      .ourex{
+        opacity: 0;
+        filter:blur(10px);
+        transition: 1s ease-in;
+        transform:translate(-100%);
+
+      }
+
+      .ourex_slide{
+        opacity:1;
+        filter: blur(0);
+        transform: translate(0);
+      }
+      .plate1,.plate2,.plate3{
+        opacity: 0;
+        filter: blur(10px); 
+        transition: 1s ease-in; 
+        
+        
+      }
+      .blur{
+        opacity:1;
+        filter: blur(0);
+      }
+      .plate2{
+        transition-delay: 0.2s;
+        
+      }
+      .plate3{
+        transition-delay: 0.4s;
+      }
   
 
 
@@ -410,7 +454,55 @@
 
     
     <script>
-      
+            const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('text_slide');
+          } else {
+            entry.target.classList.remove('text_slide');
+          }
+        });
+      });
+
+      document.querySelectorAll('.text').forEach((el) => {
+        observer.observe(el);
+      });
+
+      const observer1 = new IntersectionObserver((times) => {
+        times.forEach(time => {
+          if (time.isIntersecting) {
+            time.target.classList.add('ourex_slide');
+          } else {
+            time.target.classList.remove('ourex_slide');
+          }
+        });
+      });
+
+      document.querySelectorAll('.ourex').forEach((el) => {
+        observer1.observe(el);
+      });
+
+      const observer2 = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('blur');
+          } else {
+            entry.target.classList.remove('blur');
+          }
+        });
+      });
+
+      document.querySelectorAll('.plate1').forEach((el) => {
+        observer2.observe(el);
+      });
+
+      document.querySelectorAll('.plate2').forEach((el) => {
+        observer2.observe(el);
+      });
+
+      document.querySelectorAll('.plate3').forEach((el) => {
+        observer2.observe(el);
+      });
       
     </script>
   </body>
