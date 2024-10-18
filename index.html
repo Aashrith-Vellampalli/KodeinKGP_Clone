@@ -313,6 +313,19 @@
       .plate3{
         transition-delay: 0.6s;
       }
+            .pds{
+        opacity:0;
+        filter: blur(0);
+        transition: 1s;
+        transform: translate(-100%);
+        transition-delay: 0.5s;
+      }
+
+      .pdsslide{
+        opacity:1;
+        filter: blur(0);
+        transform: translate(0);
+      }
   
 
 
@@ -506,6 +519,18 @@
       document.querySelectorAll('.plate3').forEach((el) => {
         observer2.observe(el);
       });
+       const observer3 = new IntersectionObserver((entries) => {
+       entries.forEach(entry => {
+         if (entry.isIntersecting) {
+           entry.target.classList.add('pdsslide');
+         } else {
+           entry.target.classList.remove('pdsslide');
+         }
+       });
+     });
+     document.querySelectorAll('.pds').forEach((el) => {
+       observer3.observe(el);
+     });  
       
     </script>
   </body>
