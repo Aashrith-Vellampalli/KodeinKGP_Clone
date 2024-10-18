@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>KodeinKGP</title>
+    <link rel="icon" href="logo.png"/>
+    
+    <style>
+
+body{
+        color: white;
+        background-color: #01011b;
+        font-family: Arial, sans-serif;
+
+
+      }
+      .navbar{
+        flex-direction: row;
+        padding-left: 16px;
+        padding-right: 16px;
+        justify-content: center;
+        z-index: 20;
+        position: sticky;
+        top: 0;
+        background-color: rgba(1, 1, 27, .6);
+
+
+
+      }
+      
+      
+      .logonav{
+        display: inline-block;
+      }
+      h4{
+        display: inline-block;
+      }
+      .logonav{
+        align-items: center;
+        display: flex;
+        font-size: 1.2rem;
+        gap: 5px;
+        }
+      .nav{
+        margin-left: 504px;
+      }
+      .navopt{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+      .link{
+        padding: 0px 0px;
+        margin-left: 20px;
+        margin-right: 20px;
+        color: white;
+        font-family: Arial,sans-serif;
+        text-decoration: none;
+        position: relative;
+        overflow: hidden;
+      }
+      .link:hover:after{
+        width: 100%;
+
+      }
+      .link::after{
+        content: '';
+        position: absolute;
+        height: 2px;
+        left:0;
+        bottom:0;
+        width:0%;
+        background: #56c3d5;
+        transition: width .3s;
+      }
+      .headingwithphoto{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 0px;
+      }
+      .namei{
+        display: flex;
+        flex-direction: row;
+        
+      }
+      .namej{
+        margin-left: 10px;
+      }
+      .logo{
+        height: 60px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+      .article_heading{
+        
+      align-items: center;
+      color: #56c3d5;
+      display: flex;
+      font-family: Arial, sans-serif;
+      font-size: 8rem;
+      font-weight: bold;
+      letter-spacing: .1rem;
+      line-height: 120px;
+      margin-left: 2.5vw;
+      padding-left: 3rem;
+      }
+      .subinfo{
+        margin-left: 2.5vw;
+        padding-left: 3rem;
+      }
+      .part1{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 0px;
+        
+      }
+      .articlep{
+        height:400px;
+        margin-right: 2.5vw;
+        margin-top: 2.5vw;
+        width: 400px;
+        margin-left: 100px;
+      } 
+      .articles{
+        display: flex;
+        flex-direction:row;
+        margin-top:100px;
+        margin-left: 50px;
+        margin-right: 50px;
+        justify-content: space-around;
+      }
+      .larticlep{
+        height: 200px;
+        width: 260px;
+        position: relative;
+        z-index: -1;
+        border-radius: 35px;
+       
+      }
+      .right{
+        display:block;
+      }
+      .larticle{
+        display:flex;
+        flex-direction: column;
+        align-items: left;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-top: 2px;
+        position: relative;
+        border: 4px solid transparent;
+        border-radius: 35px;
+        background-color: rgba(54, 54, 54, .4);
+        
+      }
+      
+      
+      .date{
+        color: #56c3d5;
+        font-size: large;
+        font-weight: bold;
+        left: 10px;
+        position: relative;
+      }
+      .para{
+        font-size:x-large;
+        font-family:Arial, Helvetica, sans-serif;
+        text-decoration: none;
+
+      }
+      .lcard{
+        text-decoration: none;
+        color:white;
+        
+        border-radius: 35px;
+      }
+      .larticle:hover{
+        border-color: #56c3d5;
+        
+
+      }
+      .rflex{
+        display: flex;
+        flex-direction: row;
+      }
+      .rphoto{
+        height: 150px;
+        width:132px;
+        display: inline;
+       
+        border-top-left-radius:30px;
+        border-bottom-left-radius: 30px; 
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+
+      }
+      .rcard{
+        display: flex;
+        flex-direction: row;
+        text-decoration: none;
+        color:white;
+        background-color: rgba(54, 54, 54, .4);
+        border: 4px solid transparent;
+        border-radius:30px ;
+        margin-bottom: 10px;
+
+      }
+      
+      .rcard:hover{
+        border-color: #56c3d5;
+      }
+      .rpara{
+        font-size:large;
+        font-family:Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        margin-left: 10px;
+      }
+      .linebreak{
+        border-color:grey;
+      }
+      .footerp{
+        width: 60px;
+
+      }
+      .footericon{
+        width: 35px;
+        height: 35px;
+        background-color: #01011b;
+        color: #01011b;
+      }
+      .ficonpanel{
+        margin-top: 32px;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 32px;
+        justify-content: space-between;
+
+      }
+      .footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+
+      }
+      .footer1,.footer2,.footer3,.footer4{
+        padding: 16px;
+        margin-top: 16px;
+        margin-bottom: 16px;
+        margin-left: 40px;
+        margin-right: 40px;
+      }
+      .footerheading{
+        margin-top: 8px;
+        font-weight: bold;
+        font-size: 25px;
+        margin-bottom: 8px;
+      }
+      .footer2,.footer3,.footer4{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .bottomfooter{
+        display: flex;
+        flex-direction: row;
+        
+      }
+      .footer4{
+        height: 278.23px;
+      }
+      .flink{
+        color: wheat;
+        text-decoration: none;
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+    <div class="navbar">
+      <div class="headingwithphoto">
+        <div class="logonav">
+          <div class="namei">
+            <img src="logo.png" class="logo">
+            <h4 class="namej">KodeinKGP</h4>
+          </div>
+          
+        
+          <div class="nav">
+            <div class="navopt">
+            <a class="link" href="index.html">Home</a>
+            <a class = "link" href="">PDS_Bank</a>
+            <a  class ="link" href="kgp_articles.html">Articles</a>
+            <a  class="link" href="kgp_teams.html">Teams</a>
+            <a class="link" href="">Events</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="part1">
+      <div class="left">
+        <div class="align">
+          <h1 class="article_heading">Articles</h1>
+          <div class="subinfo">
+            <h2>Your Gateway to AI, Web Dev, and Blockchain</h2>
+            <h3>Explore cutting-edge trends and insights shaping the future of technology.</h3>
+          </div>
+        </div>
+     </div>
+     
+      <div class="right">
+        <img src="articlep.PNG" class="articlep">
+      </div>
+    </div>
+
+    <div class="articles">
+      <a href="https://medium.com/@kodeinkgp/38ce4d26e2e5" target="_blank" class="lcard">
+        <div class="larticle">
+        
+          <img src="https://kodeinkgp.in/article/gemini.jpg" alt="" class="larticlep">
+        
+        <p class="date">oct 7,2024</p>
+        <h1 class="para">From Foundations to<br>Gemini 1.5 Flash : A<br>deep dive into the<br>technical backbone<br> and latest<br>enhancements</h1>
+        
+        </div>
+      </a>
+      
+      <div class="rcards">
+        <a href="https://medium.com/@kodeinkgp/demystifying-consensus-mechanisms-c06555eced1f" target="_blank" class="rcard">
+          <div class="rflex">
+            <img src="https://openledger.info/insights/wp-content/uploads/2019/01/consensus-blockchain-948x640.png" class="rphoto">
+            <div class="rcardr">
+              <p class="date">Aug 26,2024</p>
+              <h1 class="rpara">Demystifying Consensus Mechanisms</h1>
+            </div>
+           </div>
+        </a>
+
+
+
+
+        <a href="https://medium.com/@kodeinkgp/demystifying-consensus-mechanisms-c06555eced1f" target="_blank" class="rcard">
+          <div class="rflex">
+            <img src="https://miro.medium.com/v2/resize:fit:4918/1*Y0TDuXNyywjqqr5l5GkMQQ.png" class="rphoto">
+            <div class="rcardr">
+              <p class="date">Aug 7,2024</p>
+              <h1 class="rpara">Mastering Reinforcement Learning: A Guide for<br>Students</h1>
+            </div>
+           </div>
+        </a>
+
+
+
+
+        <a href="https://medium.com/@kodeinkgp/demystifying-consensus-mechanisms-c06555eced1f" target="_blank" class="rcard">
+          <div class="rflex">
+            <img src="https://assets.eweek.com/uploads/2024/04/ew_20240426-openai-sora-overview-696x447.png" class="rphoto">
+            <div class="rcardr">
+              <p class="date">Mar 23,2024</p>
+              <h1 class="rpara">Unraveling Sora: OpenAI’s Quirky Genius</h1>
+            </div>
+           </div>
+        </a>
+
+
+
+
+        <a href="https://medium.com/@kodeinkgp/demystifying-consensus-mechanisms-c06555eced1f" target="_blank" class="rcard">
+          <div class="rflex">
+            <img src="https://d3f1iyfxxz8i1e.cloudfront.net/courses/course_image_variant/da615a681b8d_w240.webp" class="rphoto">
+            <div class="rcardr">
+              <p class="date">Jan 22,2024</p>
+              <h1 class="rpara">Exploring Machine Learning with Scikit-Learn: A<br>Comprehensive Overview</h1>
+            </div>
+           </div>
+        </a>
+
+
+
+
+        <a href="https://medium.com/@kodeinkgp/demystifying-consensus-mechanisms-c06555eced1f" target="_blank" class="rcard">
+          <div class="rflex">
+            <img src="https://images.prismic.io/encord/4fda620b-ac6c-45dc-ba17-f0d68bc7888f_What+is+Ensemble+Learning_.png?auto=compress%2Cformat&fit=max" class="rphoto">
+            <div class="rcardr">
+              <p class="date">Jan 10,2024</p>
+              <h1 class="rpara">Deep Dive series: Article on Ensemble Learning</h1>
+            </div>
+           </div>
+        </a>
+
+
+
+
+        <a href="https://medium.com/@kodeinkgp/demystifying-consensus-mechanisms-c06555eced1f" target="_blank" class="rcard">
+          <div class="rflex">
+            <img src="https://i0.wp.com/securitygrind.com/wp-content/uploads/2021/04/solidity-feat.jpg?fit=233%2C250&ssl=1" class="rphoto">
+            <div class="rcardr">
+              <p class="date">Dec 28,2023</p>
+              <h1 class="rpara">Project Solidity: A Beginner’s Guide On Writing<br>Your First Smart Contract Project</h1>
+            </div>
+           </div>
+        </a>
+
+
+        <a href="https://medium.com/@kodeinkgp/demystifying-consensus-mechanisms-c06555eced1f" target="_blank" class="rcard">
+          <div class="rflex">
+            <img src="https://cdn.prod.website-files.com/5d7b77b063a9066d83e1209c/6158dd5a9eb8a3708b09ee09_3H_KVVErj5hhg3x-6GhSIV7bGYANnhCRyu8LIMmc1179ccxk0B2ZTohkg5o9F8sLioBfeAdVzIJ_H-gsy9jJd5kkLecm6kR6abq5PVA363yILJaF5C7ugbxH0Qye1wYm4aYK0NOR%3Ds0.png" class="rphoto">
+            <div class="rcardr">
+              <p class="date">Dec 7,2023</p>
+              <h1 class="rpara">Supervised Learning: A Comprehensive Guide</h1>
+            </div>
+           </div>
+        </a>
+
+
+
+        <a href="https://medium.com/@kodeinkgp/demystifying-consensus-mechanisms-c06555eced1f" target="_blank" class="rcard">
+          <div class="rflex">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpyQHN_xq7Mg-Z2cNZQAqX8oEUlgR12zTSkQ&s" class="rphoto">
+            <div class="rcardr">
+              <p class="date">Dec 4,2023</p>
+              <h1 class="rpara">Welcome to Solidity: An Interactive Expedition into<br>the World of Smart Contracts</h1>
+            </div>
+           </div>
+        </a>
+
+
+
+        <a href="https://medium.com/@kodeinkgp/demystifying-consensus-mechanisms-c06555eced1f" target="_blank" class="rcard">
+          <div class="rflex">
+            <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/0*EAdEKK0tM6rsm-YZ" class="rphoto">
+            <div class="rcardr">
+              <p class="date">Oct 17,2023</p>
+              <h1 class="rpara">From Chaos to Clarity: Navigating Data<br>Preprocessing & the Secrets..</h1>
+            </div>
+           </div>
+        </a>
+
+
+        <a href="https://medium.com/@kodeinkgp/demystifying-consensus-mechanisms-c06555eced1f" target="_blank" class="rcard">
+          <div class="rflex">
+            <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*54Ae1vSharSEU_KftcbMkg.png" class="rphoto">
+            <div class="rcardr">
+              <p class="date">Sep 4,2023</p>
+              <h1 class="rpara">PYTHON: A SERPENTINE JOURNEY INTO AI, ML,<br>AND DL</h1>
+            </div>
+           </div>
+        </a>
+      </div>
+   </div>
+
+
+   <hr class="linebreak">
+
+   <div class="footer">
+     <div class="footer1">
+       <img src="logo.png" class="footerp"> 
+       <div class="footerheading">KodeinKGP</div>
+       <div>Indian Institute of Technology Kharagpur,<br>
+         West Bengal - 721302
+       </div>
+         <div class="ficonpanel">
+           <img src="facebookf.jpg" class="footericon">
+           <img src="logos.jpg" class="footericon">
+           <img src="linkedin.jpg" class="footericon">
+           <img src="medium.jpg" class="footericon">
+           <img src="whatsapp.jpg" class="footericon">
+         </div>
+       <div>
+       </div>
+     </div>
+
+     <div class="footer2">
+       <p class="footerheading">Blockchain</p>
+       <a href="https://www.youtube.com/watch?v=gyMwXuJrbJQ" class="flink" target="_blank">freecodecamp</a>
+       <a href="https://www.youtube.com/@CodeEater21/videos" class="flink" target="_blank">code Eater</a>
+       <a href="https://www.youtube.com/@WhiteboardCrypto" class="flink" target="_blank">Whiteboard crypto</a>
+       <a href="https://www.youtube.com/@Finematics" class="flink" target="_blank">Finematics</a>
+     </div>
+
+     <div class="footer3">
+       <p class="footerheading">Machine Learning</p>
+       <a href="https://www.youtube.com/@Deeplearningai" class="flink" target="_blank">DeepLearningAI</a>
+       <a href="https://www.youtube.com/@SirajRaval/about" class="flink" target="_blank">Siraj Raval</a>
+       <a href="https://www.youtube.com/@sentdex/playlists" class="flink" target="_blank">Sentdex</a>
+       <a href="https://www.youtube.com/@coreyms/about" class="flink" target="_blank">Corey Schafer</a>
+     </div>
+   </div>
+
+   <div class="bottomfooter">
+     <div class="footer4">
+       <p class="footerheading">Web Development</p>
+       <a href="https://www.youtube.com/playlist?list=PLu0W_9lII9agiCUZYRsvtGTXdxkzPyItg" class="flink" target="_blank">CodeWithHarry</a>
+       <a href="https://www.youtube.com/playlist?list=PLfqMhTWNBTe3H6c9OGXb5_6wcc1Mca52n" class="flink" target="_blank">Apna College</a>
+       <a href="https://www.youtube.com/playlist?list=PL4cUxeGkcC9ivBf_eKCPIAYXWzLlPAm6G" class="flink" target="_blank">net ninja</a>
+       <a href="https://www.youtube.com/playlist?list=PLillGF-RfqbZTASqIqdvm1R5mLrQq79CU" class="flink" target="_blank">Traversy Media</a>
+
+
+     </div>
+
+   </div>
+
+
+
+
+
+    
+
+
+    <script>
+     
+    </script>
+  </body>
+</html> 
